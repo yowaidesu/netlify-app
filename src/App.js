@@ -8,8 +8,9 @@ function App() {
 
   // This is the function that will generate the greeting message
   function _function(name) {
-    var bb = setCount(count + 1);
-    return `Hello ${name}! I Respect you ${bb} times! :)`;
+    const newCount = count + 1;     // Calculate the new count
+    setCount(newCount);             // Update the state
+    return `Hello ${name}! I respect you ${newCount} time${newCount > 1 ? 's' : ''}! :)`;
   }
 
   // Handle button click and update greeting state
